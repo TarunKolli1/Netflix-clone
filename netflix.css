@@ -1,0 +1,260 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background: black;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    color:#fff;
+}
+img{
+    max-width: 100%;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 26px 56px;
+    position:absolute;
+    width: 100%;
+    z-index: 5;
+}
+header .logo svg{
+    fill:rgb(229, 9, 20);
+    height: 37px;
+    display: block;
+}
+header div+div{
+    text-align: right;
+}
+header a.button{
+    display: inline-block;
+    background-color: rgb(229, 9, 20);
+    color: white;
+    padding: 7px 17px;
+    text-decoration:none;
+    border-radius: 3px;
+}
+header select{
+    background-color: transparent;
+    color:white;
+    border:1px solid white;
+    border-radius: 3px;
+    padding: 6.5px 17px;
+    margin-right: 30px;
+    padding-right: 10px;
+}
+header div.select svg{
+    height: 20px;
+    fill: white;
+    position: absolute;
+    margin-left: 2.5px;
+    margin-top: 6px;
+}
+div.splash div.background{
+    position: relative;
+}
+div.splash div.gradient{
+    background-image: linear-gradient(to top,rgba(18, 17, 17, 0.8));
+    z-index: 2;
+}
+div.splash div.background img{
+    max-width: 100%;
+    opacity: 0.6;
+}
+div.splash div.content{
+    max-width: 640px;
+    position: absolute;
+    inset: 0;
+    left: 50%;
+    margin-left: -320px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+div.splash h1{
+    font-size: 3.125rem;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+div.splash h2{
+    font-size: 1.625rem;
+    font-weight: semi-bold;
+    padding-bottom: 20px;
+}
+div.splash h3{
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding-bottom:20px;
+}
+div.end form{
+    display: grid;
+    grid-template-columns:1fr max-content ;
+    position: relative;
+    margin-top: 20px;
+}
+div.end input{
+    padding:15px 10px;
+    font-size: 1rem;
+    width: 100%;
+}
+div.end input ~ span{
+    position:absolute;
+    left: 10px;
+    top:19px;
+    z-index: 3;
+    color: #aaa;
+    transition: all .15s ease;
+    pointer-events: none;
+}
+div.end input:focus{
+    padding-top: 19px;
+    padding-bottom: 11px;
+}
+div.end input:focus ~ span{
+    top: 4px;
+    color: rgb(57, 55, 55);
+    font-size: .7rem;
+}
+div.end button{
+    font-size: 1.25rem;
+    padding: 14.5px 26px;
+    background-color:rgb(229, 9, 20);
+    color: white;
+    border:0;
+}
+
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 46px;
+    padding:70px 40px;
+    align-items: center;
+    border-top: 8px solid #222;
+}
+section div.text h1{
+    font-size: 3.125rem;
+    margin-bottom: 8px;
+}
+section div.text p{
+    font-size:1.7rem;
+}
+.media{
+    position:relative;
+}
+.media.s1 img{
+    width: 530px;
+}
+.media.s1 video{
+    width: 385px;
+    position: absolute;
+    top: 84px;
+    left: 70px;
+    z-index: -1;
+}
+
+section div.down{
+    border: 2px solid white;
+    border-radius: 20px;
+    height: 95px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+    width:350px;
+    left: 110px;
+    position: absolute;
+    background-color: black;
+    bottom:30px;
+}
+section div.down img{
+    height:75px;
+    width: auto;
+}
+.media.s2 a{
+    text-decoration: none;
+}
+.down table{
+    text-align: left;
+    margin-left: 10px;
+}
+
+.media.s3 img{
+    max-width: 460px;
+    position: relative;
+    z-index:2;
+}
+.media.s3 video{
+    width:280px;
+    position: absolute;
+    top:36px;
+    left: 85px;
+}
+section:nth-child(even) div.text{
+    order: 2;
+}
+.last {
+    border-bottom: 8px solid #222;
+}
+
+div.faq{
+    padding: 70px 30px;
+}
+div.faq h1{
+    font-size: 3.125rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+div.questions{
+    max-width: 635px;
+    font-size: 1.625rem;
+    margin: 0 auto;
+}
+div.question{
+    position: relative;
+    background-color: #303030;
+    margin-bottom: 10px;
+}
+div.question svg {
+    width: 30px;
+    height: 30px;
+    left: 580px;
+    position: absolute;
+    transform: rotate(45deg);
+    transition: all 0.2s ease;
+}
+div.question .header{
+    display: block;
+    padding:20px 30px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+div.question div.answer{
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+div.question input[type="checkbox"]{
+    display: none;
+}
+
+div.question input[type="checkbox"]:checked ~ div.answer{
+    padding: 30px 30px;
+    max-height: 600px;
+}
+div.question  input[type="checkbox"]:checked ~ .header svg{
+    transform: rotate(180deg);
+}
+div.faq form{
+    max-width: 635px;
+    margin: 0 auto;
+}
+div.faq h3{
+    text-align: center;
+    font-weight: normal;
+    margin: 40px 0 20px;
+}
+
